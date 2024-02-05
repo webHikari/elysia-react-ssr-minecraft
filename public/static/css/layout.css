@@ -1,0 +1,20 @@
+:root {
+    --black: #18191A;
+    --dark-gray: #1c1d1f;
+    --gray: #242629;
+    --dimmed-white: #DCE1E5;
+    --cold-white: #ebf0d5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    width: 100%;
+    background: var(--dark-gray);
+}
+
