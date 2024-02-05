@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-app.get('/gogo', (req, res) => {
+app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 // Порт, на котором будет запущен сервер

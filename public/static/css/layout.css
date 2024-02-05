@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 :root {
     --black: #18191A;
     --dark-gray: #1c1d1f;
     --gray: #242629;
     --dimmed-white: #DCE1E5;
-    --cold-white: #ebf0d5;
+    --cold-white: #effeff;
+    --primary: #e5302f
 }
 
 * {
@@ -15,6 +18,147 @@
 html, body {
     max-width: 100%;
     width: 100%;
-    background: var(--dark-gray);
+    background: var(--black);
+    color: var(--dimmed-white);
+    font-family: 'Noto Sans';
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Noto Sans';
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 48px;
+    /* color: var(--cold-white); */
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+a {
+    padding: 4px;
+    text-decoration: none;
+    color: var(--dimmed-white);
+    transition: .4s;
+}
+
+a:hover {
+    color: var(--dimmed-white);
+    box-shadow: inset 1px 1px 0px 100px var(--primary);
+}
+
+/* 
+
+HEADER STYLES
+
+*/
+
+header {
+    border: 1px solid var(--primary);
+    min-height: 65px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer {
+    min-height: 70px;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    border: 1px solid var(--dimmed-white);   
+}
+
+header .container {
+    min-height: 65px;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container {
+    min-height: 70px;
+}
+
+/* 
+
+HEADER
+
+*/
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 
+
+MAIN
+
+*/
+
+.main-promo {
+    min-height: calc(100vh - 95px);
+    width: 100%;
+    border: 2px var(--primary) solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.main-card {
+    margin: 10px;
+    height: 300px;
+    width: 100%;
+    border: 1px solid var(--primary);
+}
+
+.main-card:first-child {
+    margin-left: 0;
+}
+
+.main-card:last-child {
+    margin-right: 0;
+}
