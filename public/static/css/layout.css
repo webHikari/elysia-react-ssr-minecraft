@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+@font-face {
+    font-family: 'Tektur-700';
+    src: url(../fonts/tektur-6.woff);
+}
+
+@font-face {
+    font-family: 'Tektur-400';
+    src: url(../fonts/tektur-5.woff);
+}
+
 :root {
     --black: #18191A;
     --dark-gray: #1c1d1f;
@@ -20,18 +30,26 @@ html, body {
     width: 100%;
     background: var(--black);
     color: var(--dimmed-white);
-    font-family: 'Noto Sans';
+    font-family: 'Tektur-400';
+    /* border: 4px solid var(--dark-gray); */
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Noto Sans';
-    font-weight: 700;
+h1,h2,h3,h4,h5,h6{
+font-family: 'Tektur-700';
+font-weight: 700;
+}
+
+h1 span,h2 span,h3 span,h4 span,h5 span,h6 span {
+    color: var(--primary);
+    text-shadow: 0 0 75px var(--primary);
 }
 
 h1 {
     font-size: 48px;
     /* color: var(--cold-white); */
 }
+
+
 
 h2 {
     font-size: 32px;
@@ -54,16 +72,10 @@ h6 {
 }
 
 a {
-    padding: 4px;
     text-decoration: none;
     color: var(--dimmed-white);
-    transition: .4s;
 }
 
-a:hover {
-    color: var(--dimmed-white);
-    box-shadow: inset 1px 1px 0px 100px var(--primary);
-}
 
 /* 
 
@@ -72,22 +84,19 @@ HEADER STYLES
 */
 
 header {
-    border: 1px solid var(--primary);
     min-height: 65px;
     display: flex;
     justify-content: center;
 }
 
 main {
-    border: 1px solid var(--primary);
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 footer {
     min-height: 70px;
-    border: 1px solid var(--primary);
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -95,8 +104,7 @@ footer {
 
 .container {
     width: 100%;
-    max-width: 1100px;
-    border: 1px solid var(--dimmed-white);   
+    max-width: 1100px;  
 }
 
 header .container {
@@ -123,6 +131,62 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 65px;
+    background: var(--dark-gray);
+    /* MAYBE */
+    position: fixed;
+    /* MAYBE */
+}
+
+.header-links::after {
+    right: -65px;
+    content: '';
+    position: absolute;
+    border: 33px solid transparent; 
+    border-left: 33px solid var(--dark-gray); 
+    border-top: 33px solid var(--dark-gray); 
+}
+.header-links::before {
+    left: -65px;
+    content: '';
+    position: absolute;
+    border: 33px solid transparent; 
+    border-right: 33px solid var(--dark-gray); 
+    border-top: 33px solid var(--dark-gray); 
+}
+
+.links-item {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 65px;
+}
+
+.links-item a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    transition: .4s;
+    border-bottom: 3px solid var(--dark-gray);
+}
+
+.links-item a:hover {
+    color: var(--black);
+    background: var(--primary);
+    border-bottom: 3px solid var(--dimmed-white);
+}
+
+.header-auth {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 /* 
@@ -132,12 +196,12 @@ MAIN
 */
 
 .main-promo {
-    min-height: calc(100vh - 95px);
+    min-height: calc(100vh - 90px);
     width: 100%;
-    border: 2px var(--primary) solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 20px;
 }
 
 .main-cards {
@@ -152,13 +216,49 @@ MAIN
     margin: 10px;
     height: 300px;
     width: 100%;
-    border: 1px solid var(--primary);
+    border-radius: 20px;
+    padding: 20px;
 }
+
 
 .main-card:first-child {
     margin-left: 0;
+    background: var(--dimmed-white);
+    color: var(--gray);
+}
+
+.main-card {
+    background: var(--gray);
+    color: var(--cold-white);
+    position: relative;
+}
+
+.main-card span {
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.main-card p {
+    font-size: 30px;
+    margin-top: 80px;
+}
+
+.main-card p:last-child {
+    margin-top: 80px;
 }
 
 .main-card:last-child {
     margin-right: 0;
+    background: var(--primary);
+    color: var(--black);
+}
+
+.promo-hero {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.promo-hero img{
+    max-width: 75%;
 }
