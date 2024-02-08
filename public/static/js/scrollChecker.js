@@ -2,7 +2,7 @@ var blocks = ['terms', 'penalty', 'base', 'rules'];
 var navButtons = document.querySelectorAll('.nav-button');
 
 function trackScroll() {
-  var scrollPosition = window.scrollY;
+var scrollPosition = window.scrollY;
 
   for (var i = 0; i < blocks.length; i++) {
     var block = document.getElementById(blocks[i]);
@@ -13,7 +13,6 @@ function trackScroll() {
         navButtons[j].classList.remove('button-active');
         navButtons[j].classList.remove('button-past');
       }
-
       navButtons[i].classList.add('button-active');
       for (var k = 0; k < i; k++) {
         navButtons[k].classList.add('button-past');
