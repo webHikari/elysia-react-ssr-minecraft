@@ -1,0 +1,86 @@
+.rules-main {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rules-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    max-width: 800px;
+    width: 100%;
+}
+
+
+
+.rules-nav .nav-wrapper {
+    display: flex;
+    flex-direction: column;    
+}
+
+.rules-nav_item {
+    width: 100%;
+}
+
+.nav-button {
+    font-family: 'Tektur-400';
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 10px 0px 10px 20px;
+    color: var(--dimmed-white);
+    cursor: pointer;
+    /* border: 1px solid var(--primary); */
+    display: flex;
+    position: relative;
+    font-size: 16px;
+}
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: -1px;
+    top: 16px;
+    background: var(--dimmed-white);
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 35px;
+    left: 4px;
+    bottom: -16px;
+    background: var(--dimmed-white);
+}
+
+.button-active::before {
+    background: var(--primary);
+}
+
+.button-active::after {
+    background: var(--primary);
+}
+
+.button-active {
+    color: var(--primary);
+}
+
+.rules-nav_item:last-child .nav-button::before  {
+    background-color: transparent;
+}
+.rules-nav_item:last-child .nav-button::after  {
+    background-color: var(--dimmed-white);
+}
+
+.button-past::after {
+    background: var(--primary);
+}
+
+.button-past::before {
+    background: var(--primary);
+}

@@ -5,7 +5,7 @@ const dotenv = require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const observeActivity = (page) => {
+const observeActivity = async (page) => {
     const data = fs.readFile("./activity/" + page + ".txt",
     (error, data) => {
         if(error) {

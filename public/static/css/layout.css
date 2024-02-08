@@ -105,6 +105,7 @@ footer {
 .container {
     width: 100%;
     max-width: 1100px;  
+    position: relative;
 }
 
 header .container {
@@ -143,6 +144,7 @@ nav {
     /* MAYBE */
     position: fixed;
     /* MAYBE */
+    z-index: 1000;
 }
 
 .header-links::after {
