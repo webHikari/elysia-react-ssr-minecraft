@@ -77,9 +77,9 @@
 .rules-nav_item:last-child .nav-button::before  {
     background-color: transparent;
 }
-.rules-nav_item:last-child .nav-button::after  {
+/* .rules-nav_item:last-child .nav-button::after  {
     background-color: var(--dimmed-white);
-}
+} */
 
 .button-past::after {
     background: var(--primary);
@@ -102,7 +102,18 @@
     /* font-style: italic; */
 }
 
+ol li {
+    margin-top: 15px;
+}
+
+.rules-separate {
+    margin: 10px 0;
+}
+
 @media screen and (max-width: 1100px) {
+    .rules-content {
+        margin: 25px;
+    }
     .rules-nav {
         right: 0;
     }

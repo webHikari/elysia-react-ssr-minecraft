@@ -20,6 +20,11 @@
     --red-dark: #e5302f20;
 }
 
+::selection {
+    background: var(--primary); /* Цвет фона */
+    color: var(--dimmed-white);
+}
+
 * {
     margin: 0;
     padding: 0;
