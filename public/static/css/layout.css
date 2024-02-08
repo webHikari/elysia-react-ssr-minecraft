@@ -16,7 +16,8 @@
     --gray: #242629;
     --dimmed-white: #DCE1E5;
     --cold-white: #effeff;
-    --primary: #e5302f
+    --primary: #e5302f;
+    --red-dark: #e5302f20;
 }
 
 * {
