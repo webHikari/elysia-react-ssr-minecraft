@@ -1,20 +1,19 @@
-var blocks = ['terms', 'penalty', 'base', 'rules'];
-var navButtons = document.querySelectorAll('.nav-button');
+const blocks = ['terms', 'penalty', 'base', 'rules'];
+const navButtons = document.querySelectorAll('.nav-button');
 
 function trackScroll() {
-var scrollPosition = window.scrollY;
+const scrollPosition = window.scrollY;
 
-  for (var i = 0; i < blocks.length; i++) {
-    var block = document.getElementById(blocks[i]);
-    var blockPosition = block.offsetTop;
-
+  for (let i = 0; i < blocks.length; i++) {
+    const block = document.getElementById(blocks[i]);
+    const blockPosition = block.offsetTop;
     if (scrollPosition+200 >= blockPosition) {
-      for (var j = 0; j < blocks.length; j++) {
+      for (let j = 0; j < blocks.length; j++) {
         navButtons[j].classList.remove('button-active');
         navButtons[j].classList.remove('button-past');
       }
       navButtons[i].classList.add('button-active');
-      for (var k = 0; k < i; k++) {
+      for (let k = 0; k < i; k++) {
         navButtons[k].classList.add('button-past');
       }
     }
@@ -22,8 +21,8 @@ var scrollPosition = window.scrollY;
 }
 
 function scrollToBlock(index) {
-  var block = document.getElementById(blocks[index]);
-  var blockPosition = block.offsetTop;
+  const block = document.getElementById(blocks[index]);
+  const blockPosition = block.offsetTop;
 
   window.scrollTo({
     top: blockPosition,
@@ -33,9 +32,9 @@ function scrollToBlock(index) {
 
 window.addEventListener('scroll', trackScroll);
 
-for (var i = 0; i < navButtons.length; i++) {
+for (let i = 0; i < navButtons.length; i++) {
   navButtons[i].addEventListener('click', function(event) {
-    var index = Array.prototype.indexOf.call(navButtons, event.target);
+    const index = Array.prototype.indexOf.call(navButtons, event.target);
     scrollToBlock(index);
   });
 }
